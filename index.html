@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scribe of Lagash — Obsidian plugins for writers</title>
+<meta name="description" content="Scribe of Lagash: a series of focused, low-configuration Obsidian plugins for writers. Use only the one you need, or combine them.">
+<meta name="theme-color" content="#81096b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}body{margin:0;background:#f6f1e8}
+a{color:#81096b}a:hover{color:#b851a5}
+</style>
+<style>
+#lightbox{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh;cursor:zoom-out}
+#lightbox::backdrop{background:rgba(31,28,25,.88)}
+#lightbox figure{margin:0;height:100%;box-sizing:border-box;padding:64px 24px 24px;display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center}
+#lightbox img{max-width:min(1400px,100%);max-height:calc(100vh - 140px);height:auto;border-radius:8px;background:#f6f1e8;cursor:default}
+#lightbox figcaption{font-family:"DejaVu Sans Mono",ui-monospace,monospace;font-size:13px;color:#f6f1e8}
+#lightbox .lb-close{position:fixed;top:12px;right:12px;width:44px;height:44px;border-radius:9999px;border:1px solid rgba(246,241,232,.4);background:#81096b;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+#lightbox .lb-close svg{width:20px;height:20px}
+[data-full]:focus-visible{outline:2px solid #81096b;outline-offset:3px}
+</style>
+</head>
+<body>
+<div style="background: #f6f1e8; color: #46413b; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.6; min-height: 100vh">
+
+<!-- Header -->
+<header style="max-width: 1080px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd4c6">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; font-family: Lora, Georgia, serif; font-size: 22px; font-weight: 500; color: #81096b; text-decoration: none"><svg viewBox="0 0 28 16" style="width: 28px; height: 16px" aria-hidden="true"><path d="M2 12 C 8 12, 9 4, 14 6 S 22 10, 26 3" fill="none" stroke="#b851a5" stroke-width="2.2" stroke-linecap="round"></path><circle cx="26" cy="3" r="2.4" fill="#81096b"></circle></svg>Scribe of Lagash</a>
+<nav style="display: flex; flex-wrap: wrap; gap: 24px; font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px">
+<a href="#why" style="color: #46413b; text-decoration: none; padding: 12px 0">why</a>
+<a href="#plugins" style="color: #46413b; text-decoration: none; padding: 12px 0">plugins</a>
+<a href="#details" style="color: #46413b; text-decoration: none; padding: 12px 0">features</a>
+<a href="#install" style="color: #46413b; text-decoration: none; padding: 12px 0">install</a>
+<a href="https://github.com/aescanes" style="color: #46413b; text-decoration: none; padding: 12px 0">github</a>
+</nav>
+</header>
+
+<!-- Hero -->
+<section id="top" style="max-width: 1080px; margin: 0 auto; padding: 96px 24px 72px; display: flex; flex-direction: column; gap: 28px">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 15px; color: #6b655d"><span style="color: #81096b">~/vault</span> $ a series of obsidian plugins for writers</div>
+<h1 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: clamp(52px, 9vw, 104px); line-height: 1; letter-spacing: -0.01em; color: #81096b">Scribe <em style="font-style: italic; color: #b851a5">of</em> Lagash</h1>
+<div style="width: 56px; height: 3px; border-radius: 2px; background: #b851a5"></div>
+<p style="margin: 0; max-width: 720px; font-family: Lora, Georgia, serif; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.4; color: #1f1c19">Small, focused <a href="https://obsidian.md" style="color: #81096b; text-decoration-color: #b851a5; text-underline-offset: 4px">Obsidian</a> plugins for writers who would rather be <em>writing</em> than configuring.</p>
+<p style="margin: 0; max-width: 640px; font-size: 18px; line-height: 1.7">A series of free plugins for Obsidian. Visualize your story, track your goals, and write without distractions — each plugin does one thing, needs almost no setup, and leaves your notes exactly as you wrote them.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
+<a href="#plugins" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 8px; background: #81096b; color: #ffffff; text-decoration: none; font-weight: 500">See the plugins</a>
+<a href="#why" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 8px; border: 1px solid #b851a5; color: #81096b; text-decoration: none; font-weight: 500">Why Scribe of Lagash</a>
+</div>
+<svg viewBox="0 0 1032 90" preserveAspectRatio="none" style="width: 100%; height: 90px; margin-top: 32px" aria-hidden="true">
+<line x1="0" y1="89" x2="1032" y2="89" stroke="#ddd4c6" stroke-dasharray="4 6"></line>
+<line x1="0" y1="45" x2="1032" y2="45" stroke="#ddd4c6" stroke-dasharray="4 6"></line>
+<path d="M8 70 C 90 66, 140 40, 220 46 S 360 72, 440 52 S 580 14, 660 30 S 820 64, 900 40 S 990 20, 1024 24" fill="none" stroke="#b851a5" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"></path>
+<circle cx="8" cy="70" r="5" fill="#f6f1e8" stroke="#b851a5" stroke-width="2.4"></circle>
+<circle cx="1024" cy="24" r="5" fill="#81096b"></circle>
+</svg>
+</section>
+
+<!-- Why -->
+<section id="why" style="border-top: 1px solid #ddd4c6; border-bottom: 1px solid #e6d3df; background: #f3e8ee">
+<div style="max-width: 1080px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 20px">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #81096b">// why</div>
+<h2 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 36px; line-height: 1.2; color: #1f1c19">Less tool. More <em>writing</em>.</h2>
+<p style="margin: 0; font-size: 17px">Scribe of Lagash was born from trying the other tools. They were powerful, but every one came with dozens of settings, panels and features a writer rarely needs — and before you could write a single scene, you had to learn the tool.</p>
+<p style="margin: 0; font-size: 17px">Scribe of Lagash goes the other way: use only what your writing approach needs, with as little configuration as possible. The tool gets out of the way so you can sit down and start writing.</p>
+<p style="margin: 0; font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px; color: #6b655d">— made by Alejandro Escanes, software engineer <span style="color: #b851a5">/</span> writer</p>
+</div>
+<div style="flex: 1 1 360px; display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 0; align-self: center">
+<div style="padding: 20px 0; border-top: 1px solid #dcc3d3; display: flex; gap: 20px">
+<span style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px; color: #81096b; padding-top: 4px">01</span>
+<div><div style="font-family: Lora, Georgia, serif; font-size: 20px; color: #1f1c19">Only what you need</div><div style="font-size: 15px">Each plugin does one thing. Install one, two or all three.</div></div>
+</div>
+<div style="padding: 20px 0; border-top: 1px solid #dcc3d3; display: flex; gap: 20px">
+<span style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px; color: #81096b; padding-top: 4px">02</span>
+<div><div style="font-family: Lora, Georgia, serif; font-size: 20px; color: #1f1c19">Almost no setup</div><div style="font-size: 15px">Point it at your story folder and start. Sensible defaults do the rest.</div></div>
+</div>
+<div style="padding: 20px 0; border-top: 1px solid #dcc3d3; display: flex; gap: 20px">
+<span style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px; color: #81096b; padding-top: 4px">03</span>
+<div><div style="font-family: Lora, Georgia, serif; font-size: 20px; color: #1f1c19">Your notes stay yours</div><div style="font-size: 15px">Chapters and scenes are plain notes in your vault. Your prose is never rewritten.</div></div>
+</div>
+<div style="padding: 20px 0; border-top: 1px solid #dcc3d3; border-bottom: 1px solid #dcc3d3; display: flex; gap: 20px">
+<span style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px; color: #81096b; padding-top: 4px">04</span>
+<div><div style="font-family: Lora, Georgia, serif; font-size: 20px; color: #1f1c19">Independent, better together</div><div style="font-size: 15px">None requires another, but they are designed to complement each other.</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Plugins -->
+<section id="plugins" style="max-width: 1080px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #81096b">// the series</div>
+<h2 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 36px; line-height: 1.2; color: #1f1c19">Three plugins, one concern each.</h2>
+<p style="margin: 0; font-size: 17px">Independent, single-concern Obsidian plugins for planning and writing stories.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+<div style="border: 1px solid #e6d3df; border-radius: 8px; background: #f3e8ee; padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #81096b">use only what you need</div>
+<div style="font-size: 15px">Every plugin works on its own and none requires another. Install just the one that fits how you write — or two, or all three.</div>
+</div>
+<div style="border: 1px solid #e6d3df; border-radius: 8px; background: #f3e8ee; padding: 20px 24px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #81096b">better together</div>
+<div style="font-size: 15px">They are designed to complement each other: point Visualization and Goals and Stats at the same story folder, and turn on Focus when it's time to write.</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+
+<!-- Visualization -->
+<article style="border: 1px solid #ddd4c6; border-radius: 8px; background: #fbf8f2; display: flex; flex-direction: column; overflow: hidden">
+<div style="height: 168px; background: #f3e8ee; border-bottom: 1px solid #e6d3df; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 14px" aria-hidden="true">
+<div style="display: flex; gap: 8px; align-items: center"><span style="width: 36px; height: 1px; background: #c4bcae"></span><span style="width: 54px; height: 32px; border: 1px solid #c4bcae; border-radius: 4px; background: #fbf8f2"></span><span style="width: 54px; height: 32px; border: 1px solid #c4bcae; border-radius: 4px; background: #fbf8f2"></span><span style="width: 54px; height: 32px; border: 1px dashed #c4bcae; border-radius: 4px"></span></div>
+<div style="display: flex; gap: 8px; align-items: center"><span style="width: 36px; height: 1px; background: #c4bcae"></span><span style="width: 54px; height: 32px; border: 1px solid #b851a5; border-radius: 4px; background: #f6e9f1"></span><span style="width: 54px; height: 32px; border: 1px solid #c4bcae; border-radius: 4px; background: #fbf8f2"></span></div>
+<div style="display: flex; gap: 8px; align-items: center"><span style="width: 36px; height: 1px; background: #c4bcae"></span><span style="width: 54px; height: 32px; border: 1px dashed #c4bcae; border-radius: 4px"></span><span style="width: 54px; height: 32px; border: 1px solid #c4bcae; border-radius: 4px; background: #fbf8f2"></span><span style="width: 54px; height: 32px; border: 1px solid #c4bcae; border-radius: 4px; background: #fbf8f2"></span></div>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; color: #6b655d">01 — visualize &amp; plot</div>
+<h3 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 26px; color: #1f1c19">Visualization</h3>
+<p style="margin: 0; font-size: 15px">See every chapter and scene as a card, and plot what comes next before you write it.</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 15px; display: flex; flex-direction: column; gap: 4px">
+<li>StoryLines: arrange cards on your own lines</li>
+<li>Characters, Locations and Chronological views</li>
+<li>Plot matrix and Story Outline — planned rows become notes in a click</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: auto; padding-top: 12px; font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px">
+<a href="https://community.obsidian.md/plugins/scribe-of-lagash-visualization" style="padding: 12px 0">Obsidian →</a>
+<a href="https://github.com/aescanes/scribe-of-lagash-visualization" style="padding: 12px 0">GitHub →</a>
+<a href="#visualization" style="padding: 12px 0">Details ↓</a>
+</div>
+</div>
+</article>
+
+<!-- Goals and Stats -->
+<article style="border: 1px solid #ddd4c6; border-radius: 8px; background: #fbf8f2; display: flex; flex-direction: column; overflow: hidden">
+<div style="height: 168px; background: #f3e8ee; border-bottom: 1px solid #e6d3df; padding: 24px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 28px" aria-hidden="true">
+<svg viewBox="0 0 100 100" style="width: 104px; height: 104px">
+<circle cx="50" cy="50" r="40" fill="none" stroke="#ddd4c6" stroke-width="9"></circle>
+<circle cx="50" cy="50" r="40" fill="none" stroke="#b851a5" stroke-width="9" stroke-linecap="round" stroke-dasharray="180 252" transform="rotate(-90 50 50)"></circle>
+<text x="50" y="56" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="18" fill="#1f1c19">72%</text>
+</svg>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px">
+<span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #e2c3d8"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #ddd4c6"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span>
+<span style="width: 11px; height: 11px; border-radius: 3px; background: #e2c3d8"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #ddd4c6"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #e2c3d8"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span>
+<span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #e2c3d8"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #ddd4c6"></span>
+<span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #e2c3d8"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border-radius: 3px; background: #b851a5"></span><span style="width: 11px; height: 11px; border: 1px solid #b851a5; box-sizing: border-box; border-radius: 3px"></span><span style="width: 11px; height: 11px; border-radius: 3px; border: 1px dashed #c4bcae; box-sizing: border-box"></span><span style="width: 11px; height: 11px; border-radius: 3px; border: 1px dashed #c4bcae; box-sizing: border-box"></span>
+</div>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; color: #6b655d">02 — goals &amp; stats</div>
+<h3 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 26px; color: #1f1c19">Goals and Stats</h3>
+<p style="margin: 0; font-size: 15px">Set a daily writing goal and see detailed statistics for it and for the story as a whole.</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 15px; display: flex; flex-direction: column; gap: 4px">
+<li>Daily-goal ring and a month calendar of your progress</li>
+<li>Writing-session timer with 15/30/60-minute presets</li>
+<li>Word or character counts right in the file explorer</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: auto; padding-top: 12px; font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px">
+<a href="https://community.obsidian.md/plugins/scribe-of-lagash-goals-stats" style="padding: 12px 0">Obsidian →</a>
+<a href="https://github.com/aescanes/scribe-of-lagash-goals-stats" style="padding: 12px 0">GitHub →</a>
+<a href="#goals-stats" style="padding: 12px 0">Details ↓</a>
+</div>
+</div>
+</article>
+
+<!-- Focus -->
+<article style="border: 1px solid #ddd4c6; border-radius: 8px; background: #fbf8f2; display: flex; flex-direction: column; overflow: hidden">
+<div style="height: 168px; background: #f3e8ee; border-bottom: 1px solid #e6d3df; padding: 24px 40px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 9px" aria-hidden="true">
+<span style="height: 6px; width: 88%; border-radius: 3px; background: #ddd4c6"></span>
+<span style="height: 6px; width: 72%; border-radius: 3px; background: #ddd4c6"></span>
+<div style="border: 1px solid #c4bcae; border-radius: 4px; padding: 8px 10px; background: #fbf8f2; display: flex; align-items: center; gap: 2px"><span style="height: 6px; width: 64%; border-radius: 3px; background: #1f1c19"></span><span style="height: 12px; width: 2px; background: #b851a5"></span></div>
+<span style="height: 6px; width: 80%; border-radius: 3px; background: #ddd4c6"></span>
+<span style="height: 6px; width: 56%; border-radius: 3px; background: #ddd4c6"></span>
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; color: #6b655d">03 — focus</div>
+<h3 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 26px; color: #1f1c19">Focus</h3>
+<p style="margin: 0; font-size: 15px">One key hides everything except the page you are writing. Press Esc to come back.</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 15px; display: flex; flex-direction: column; gap: 4px">
+<li>Four modes: Distraction-free, Typewriter, Spotlight, Deep work</li>
+<li>Page themes and optional key sounds</li>
+<li>Dimming only changes the view — your note is never edited</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: auto; padding-top: 12px; font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px">
+<a href="https://community.obsidian.md/plugins/scribe-of-lagash-focus" style="padding: 12px 0">Obsidian →</a>
+<a href="https://github.com/aescanes/scribe-of-lagash-focus" style="padding: 12px 0">GitHub →</a>
+<a href="#focus" style="padding: 12px 0">Details ↓</a>
+</div>
+</div>
+</article>
+
+</div>
+</section>
+
+<!-- Details -->
+<section id="details" style="max-width: 1080px; margin: 0 auto; padding: 24px 24px 96px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px; padding-bottom: 48px">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #81096b">// in detail</div>
+<h2 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 36px; line-height: 1.2; color: #1f1c19">A closer look at each plugin.</h2>
+</div>
+<article id="visualization" style="padding: 72px 0; border-top: 1px solid #ddd4c6; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #81096b">01 — visualization</div>
+<h3 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.15; color: #81096b">See the whole story at a glance.</h3>
+<p style="margin: 0; font-size: 17px">Chapters and scenes stay as regular notes in your vault. Point the plugin at your story folder and it recognizes them from their titles — "Chapter 1", "Scene II", "Prologue" — with no extra setup. It never edits a note you already wrote.</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 15px; display: flex; flex-direction: column; gap: 8px">
+<li><strong style="font-weight: 500; color: #1f1c19">StoryLines</strong> — every chapter and scene as a card on colored lines you create; drag cards between lines and along a shared column grid.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">Plot matrix</strong> — your Story Outline as an editable table; click a planned row to turn it into a real chapter or scene note.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">Characters &amp; Locations</strong> — the same cards grouped by who appears in them and where they happen.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">Chronological</strong> — cards ordered by in-story date, so flashbacks and parallel timelines are easy to follow.</li>
+</ul>
+<a href="https://github.com/aescanes/scribe-of-lagash-visualization" style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px; padding: 12px 0">Full documentation on GitHub →</a>
+</div>
+<figure style="flex: 1.4 1 460px; margin: 0; min-width: 0">
+<button type="button" data-full="img/vis-storylines-view.webp" aria-label="Enlarge image: StoryLines view: chapter cards arranged on colored story lines" style="display: block; width: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/vis-storylines-view.webp" alt="StoryLines view: chapter cards arranged on colored story lines" loading="lazy" style="width: 100%; height: auto; display: block; border: 1px solid #e6d3df; border-radius: 8px"></button>
+</figure>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 200px; border: 1px solid #e6d3df; border-radius: 8px; overflow: hidden; background: #f3e8ee; display: flex; align-items: center; justify-content: center"><button type="button" data-full="img/vis-plot-matrix-view.webp" aria-label="Enlarge image: Plot matrix view" style="display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/vis-plot-matrix-view.webp" alt="Plot matrix view" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block"></button></div>
+<figcaption style="font-size: 14px; line-height: 1.5"><strong style="font-weight: 500; color: #1f1c19">Plot matrix</strong> — plan ahead, row by row.</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 200px; border: 1px solid #e6d3df; border-radius: 8px; overflow: hidden; background: #f3e8ee; display: flex; align-items: center; justify-content: center"><button type="button" data-full="img/vis-characters-view.webp" aria-label="Enlarge image: Characters view" style="display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/vis-characters-view.webp" alt="Characters view" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block"></button></div>
+<figcaption style="font-size: 14px; line-height: 1.5"><strong style="font-weight: 500; color: #1f1c19">Characters</strong> — one line per character.</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 200px; border: 1px solid #e6d3df; border-radius: 8px; overflow: hidden; background: #f3e8ee; display: flex; align-items: center; justify-content: center"><button type="button" data-full="img/vis-chronological-view.webp" aria-label="Enlarge image: Chronological view" style="display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/vis-chronological-view.webp" alt="Chronological view" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block"></button></div>
+<figcaption style="font-size: 14px; line-height: 1.5"><strong style="font-weight: 500; color: #1f1c19">Chronological</strong> — the story in in-story time.</figcaption>
+</figure>
+</div>
+</article>
+<article id="goals-stats" style="padding: 72px 0; border-top: 1px solid #ddd4c6; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #81096b">02 — goals and stats</div>
+<h3 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.15; color: #81096b">Keep a steady writing habit.</h3>
+<p style="margin: 0; font-size: 17px">Choose a story folder, a daily goal in words or characters, and the days you write. Weekly and monthly targets are worked out for you. Your history lives in a file inside your vault, so it travels with it.</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 15px; display: flex; flex-direction: column; gap: 8px">
+<li><strong style="font-weight: 500; color: #1f1c19">Writing-goal widget</strong> — a ring for today's progress, a week and month summary, and a calendar that colors each day by whether you met your goal.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">Goals and Stats tab</strong> — week, month, rolling 7- and 30-day and yearly totals with daily averages.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">Writing session</strong> — a simple countdown timer with 15, 30 and 60-minute presets that survives closing Obsidian.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">File-explorer counts</strong> — word or character counts next to every note and folder, updating as you write.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">A small celebration</strong> — a toast and a burst of confetti the moment you reach the daily goal.</li>
+</ul>
+<a href="https://github.com/aescanes/scribe-of-lagash-goals-stats" style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px; padding: 12px 0">Full documentation on GitHub →</a>
+</div>
+<figure style="flex: 1.4 1 460px; margin: 0; min-width: 0">
+<button type="button" data-full="img/goals-goals-and-stats-tab.webp" aria-label="Enlarge image: Goals and Stats tab with writing goal history and calendar" style="display: block; width: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/goals-goals-and-stats-tab.webp" alt="Goals and Stats tab with writing goal history and calendar" loading="lazy" style="width: 100%; height: auto; display: block; border: 1px solid #e6d3df; border-radius: 8px"></button>
+</figure>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 200px; border: 1px solid #e6d3df; border-radius: 8px; overflow: hidden; background: #f3e8ee; display: flex; align-items: center; justify-content: center"><button type="button" data-full="img/goals-writing-goal-widget.webp" aria-label="Enlarge image: Writing-goal widget in the sidebar" style="display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/goals-writing-goal-widget.webp" alt="Writing-goal widget in the sidebar" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; display: block"></button></div>
+<figcaption style="font-size: 14px; line-height: 1.5"><strong style="font-weight: 500; color: #1f1c19">Goal widget</strong> — today at a glance, in the sidebar.</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 200px; border: 1px solid #e6d3df; border-radius: 8px; overflow: hidden; background: #f3e8ee; display: flex; align-items: center; justify-content: center"><button type="button" data-full="img/goals-writing-session.webp" aria-label="Enlarge image: Writing session timer" style="display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/goals-writing-session.webp" alt="Writing session timer" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; display: block"></button></div>
+<figcaption style="font-size: 14px; line-height: 1.5"><strong style="font-weight: 500; color: #1f1c19">Writing session</strong> — a timer for focused sprints.</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 200px; border: 1px solid #e6d3df; border-radius: 8px; overflow: hidden; background: #f3e8ee; display: flex; align-items: center; justify-content: center"><button type="button" data-full="img/goals-story-count.webp" aria-label="Enlarge image: Word counts in the file explorer" style="display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/goals-story-count.webp" alt="Word counts in the file explorer" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; display: block"></button></div>
+<figcaption style="font-size: 14px; line-height: 1.5"><strong style="font-weight: 500; color: #1f1c19">Story counts</strong> — totals per note and folder.</figcaption>
+</figure>
+</div>
+</article>
+<article id="focus" style="padding: 72px 0; border-top: 1px solid #ddd4c6; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #81096b">03 — focus</div>
+<h3 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.15; color: #81096b">Just you and the page.</h3>
+<p style="margin: 0; font-size: 17px">Press your hotkey and everything except the current note disappears: sidebars, ribbon, tabs and status bar. On desktop the window goes full screen too. Press Esc to come back. There is no settings tab, and your notes are never edited.</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 15px; display: flex; flex-direction: column; gap: 8px">
+<li><strong style="font-weight: 500; color: #1f1c19">Four focus modes</strong> — Distraction-free, Typewriter (the current line stays centered), Spotlight (only the current paragraph is lit) and Deep work (only the current line).</li>
+<li><strong style="font-weight: 500; color: #1f1c19">Themes</strong> — Paper, Sepia, Dark and Night pages, without touching your Obsidian theme.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">The dock</strong> — a small bar at the bottom to switch mode, font, text size, theme and key sounds — it hides while you write.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">Key sounds</strong> — optional recordings of a real mechanical keyboard as you type.</li>
+<li><strong style="font-weight: 500; color: #1f1c19">No red squiggles</strong> — spell check is switched off while you write, and back on when you leave.</li>
+</ul>
+<a href="https://github.com/aescanes/scribe-of-lagash-focus" style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px; padding: 12px 0">Full documentation on GitHub →</a>
+</div>
+<figure style="flex: 1.4 1 460px; margin: 0; min-width: 0">
+<button type="button" data-full="img/focus-typewriter-mode.webp" aria-label="Enlarge image: Typewriter mode: the current line in a box at the center of the page" style="display: block; width: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/focus-typewriter-mode.webp" alt="Typewriter mode: the current line in a box at the center of the page" loading="lazy" style="width: 100%; height: auto; display: block; border: 1px solid #e6d3df; border-radius: 8px"></button>
+</figure>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 200px; border: 1px solid #e6d3df; border-radius: 8px; overflow: hidden; background: #f3e8ee; display: flex; align-items: center; justify-content: center"><button type="button" data-full="img/focus-spotlight-mode.webp" aria-label="Enlarge image: Spotlight mode" style="display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/focus-spotlight-mode.webp" alt="Spotlight mode" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block"></button></div>
+<figcaption style="font-size: 14px; line-height: 1.5"><strong style="font-weight: 500; color: #1f1c19">Spotlight</strong> — only the paragraph you are writing.</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 200px; border: 1px solid #e6d3df; border-radius: 8px; overflow: hidden; background: #f3e8ee; display: flex; align-items: center; justify-content: center"><button type="button" data-full="img/focus-dock-menu.webp" aria-label="Enlarge image: The dock and its controls" style="display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/focus-dock-menu.webp" alt="The dock and its controls" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; display: block"></button></div>
+<figcaption style="font-size: 14px; line-height: 1.5"><strong style="font-weight: 500; color: #1f1c19">The dock</strong> — every control in one small bar.</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 200px; border: 1px solid #e6d3df; border-radius: 8px; overflow: hidden; background: #f3e8ee; display: flex; align-items: center; justify-content: center"><button type="button" data-full="img/focus-dark-theme.webp" aria-label="Enlarge image: Dark theme" style="display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in"><img src="img/focus-dark-theme.webp" alt="Dark theme" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block"></button></div>
+<figcaption style="font-size: 14px; line-height: 1.5"><strong style="font-weight: 500; color: #1f1c19">Themes</strong> — Paper, Sepia, Dark or Night.</figcaption>
+</figure>
+</div>
+</article>
+</section>
+
+<!-- Install -->
+<section id="install" style="max-width: 1080px; margin: 0 auto; padding: 0 24px 96px">
+<div style="border: 1px solid #ddd4c6; border-radius: 8px; padding: 40px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 28px; color: #1f1c19">Start writing in a minute.</h2>
+<p style="margin: 0; font-size: 16px">Requires Obsidian 1.10.0 or later. Install from <strong style="font-weight: 500; color: #1f1c19">Settings → Community plugins</strong>, or download <code style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 14px">main.js</code>, <code style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 14px">manifest.json</code> and <code style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 14px">styles.css</code> from each plugin's latest release.</p>
+</div>
+<pre style="flex: 1 1 320px; margin: 0; padding: 20px 24px; border-radius: 8px; background: #f3e8ee; font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 14px; line-height: 1.7; color: #46413b; overflow-x: auto"><span style="color: #81096b">// the whole setup</span>
+1. install the plugin
+2. pick your story folder
+3. write.</pre>
+</div>
+</section>
+
+<!-- About the name -->
+<section style="border-top: 1px solid #ddd4c6">
+<div style="max-width: 720px; margin: 0 auto; padding: 80px 24px; text-align: center; display: flex; flex-direction: column; gap: 16px; align-items: center">
+<div style="font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #81096b">// about the name</div>
+<p style="margin: 0; font-family: Lora, Georgia, serif; font-size: 24px; line-height: 1.5; color: #1f1c19">“Scribe” is the writer at the center of every plugin. “Lagash” nods to <em>Nippur de Lagash</em>, the classic Argentine comic.</p>
+</div>
+</section>
+
+<!-- Footer -->
+<footer style="border-top: 1px solid #ddd4c6">
+<div style="max-width: 1080px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; font-size: 14px; color: #6b655d">
+<div><span style="font-family: Lora, Georgia, serif; font-size: 16px; color: #81096b">Scribe of Lagash</span> · free and open source (MIT) · made by Alejandro Escanes</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; font-family: &quot;DejaVu Sans Mono&quot;, ui-monospace, monospace; font-size: 13px">
+<a href="https://ko-fi.com/O3J528W3FZ" style="padding: 12px 0">buy me a coffee</a>
+<a href="https://github.com/aescanes" style="padding: 12px 0">github</a>
+</div>
+</div>
+</footer>
+
+</div>
+<dialog id="lightbox" aria-label="Enlarged image">
+<button type="button" class="lb-close" aria-label="Close image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg></button>
+<figure><img alt=""><figcaption></figcaption></figure>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lightbox');
+  var img = dlg.querySelector('img'), cap = dlg.querySelector('figcaption');
+  document.querySelectorAll('[data-full]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var inner = btn.querySelector('img');
+      img.src = btn.getAttribute('data-full');
+      img.alt = inner ? inner.alt : '';
+      cap.textContent = img.alt;
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', function (e) { if (e.target !== img) dlg.close(); });
+  dlg.addEventListener('close', function () { img.removeAttribute('src'); });
+})();
+</script>
+</body>
+</html>
